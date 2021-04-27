@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Retry : MonoBehaviour
 {
-    public int index;
-    public string levelName;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {

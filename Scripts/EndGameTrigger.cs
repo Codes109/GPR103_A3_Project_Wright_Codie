@@ -10,7 +10,7 @@ public class EndGameTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Application.Quit();
+            SceneManager.LoadScene(0);
         }
     }
 }
