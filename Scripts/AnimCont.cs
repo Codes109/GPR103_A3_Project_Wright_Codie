@@ -1,12 +1,30 @@
-﻿using System.Collections;
+﻿/*=================================================================================================
+ *AnimCont.cs
+ *=================================================================================================
+ *This is the Animator Controller script which sets the parameters for the player sprite animation.
+ *
+ *Version 1.0
+ *
+ *@SetAnimBool()
+ *Sets animation parameters based on player input. 
+ */
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimCont : MonoBehaviour
 {
+    //Get the player Animator
     public Animator playerAnim;
         
         private void Update()
+    {
+        SetAnimBool();
+    }
+
+    void SetAnimBool()
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
@@ -24,7 +42,7 @@ public class AnimCont : MonoBehaviour
         }
         else
         {
-            
+
             playerAnim.SetBool("attack", false);
             playerAnim.SetBool("canMove", true);
         }
@@ -51,6 +69,4 @@ public class AnimCont : MonoBehaviour
             playerAnim.SetBool("roll", false);
         }
     }
-
-
 }

@@ -1,3 +1,14 @@
+/*=================================================================================================
+ *LoadingMoveBox.cs
+ *=================================================================================================
+ *Attached to Box GameObject on the loading screen scene. Used to control box movement and scene transition. 
+ *
+ *Version 1.0
+ *
+ *@PushBox()
+ *Pushes GameObject script is attached to.
+ *
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,24 +16,28 @@ using UnityEngine.SceneManagement;
 
 public class LoadingMoveBox : MonoBehaviour
 {
-    public GameObject loadingBox;
-    Vector2 pushBox;
+    //Declare a vector2 for pushing box at steady rate.
+    Vector2 pushVector;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-     
+     pushVector = new Vector2(4, 0);
     }
 
-    // Update is called once per frame
-    void Update()
+    //Used FixedUpdate due to physics manipulation.
+    void FixedUpdate()
     {
-        pushBox = new Vector2(4, 0);
-        loadingBox.GetComponent<Rigidbody2D>().velocity = pushBox;
+        PushBox();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex+1);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex+1); //Change to the next scene via scene index. Intended for re-use.
+    }
+
+    //Use the Rigidbody component velocity to move the Box GameObject.
+    void PushBox()
+    {
+        GetComponent<Rigidbody2D>().velocity = pushVector;
     }
 }

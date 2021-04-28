@@ -1,12 +1,25 @@
-﻿using System.Collections;
+﻿/*=================================================================================================
+ *OpenDoor.cs
+ *=================================================================================================
+ *Attached to ExitDoor GameObjects in each level.
+ *Checks for all true instances of goals array. If all goals are true exitDoor GameObject sprite is changed and collider is disabled. 
+ *
+ *Version 1.0
+ *
+ *@AreGoalsMet()
+ *For loop checking for true isGoalTriggered boolean in script attached to each GameObject in goals array.
+ *
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
-    public SpriteRenderer doorSprite;
+    public SpriteRenderer exitDoorSpriteRend;
     public BoxCollider2D exitDoorCollider;
-    public Sprite doorSprites;
+    public Sprite openDoorSprite;
     public GameObject[] goals;
     
 
@@ -24,7 +37,7 @@ public class OpenDoor : MonoBehaviour
     {
         if (AreGoalsMet() == true)
         {
-            doorSprite.sprite = doorSprites;
+            exitDoorSpriteRend.sprite = openDoorSprite;
             exitDoorCollider.enabled = false;
         }   
     }
