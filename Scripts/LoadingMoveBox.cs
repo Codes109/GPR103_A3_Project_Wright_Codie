@@ -18,6 +18,7 @@ public class LoadingMoveBox : MonoBehaviour
 {
     //Declare a vector2 for pushing box at steady rate.
     Vector2 pushVector;
+    public int index;
 
     private void Start()
     {
@@ -32,7 +33,7 @@ public class LoadingMoveBox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex+1); //Change to the next scene via scene index. Intended for re-use.
+        SceneManager.LoadSceneAsync(index); //Change to the next scene via scene index. Intended for re-use.
     }
 
     //Use the Rigidbody component velocity to move the Box GameObject.

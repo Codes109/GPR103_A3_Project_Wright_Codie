@@ -20,7 +20,7 @@ public class EndGameTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))//Will only transistion scene if collision occurs with a GameObject tagged 'Player'.
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(5);
         }
     }
 }

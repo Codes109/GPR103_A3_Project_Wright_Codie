@@ -23,63 +23,37 @@ public class SpriteController : MonoBehaviour
             KnightMovement();
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate()//Perform physics on player rigidbody in fixedUpdate.
     {
         playerFrame.velocity = moveDir * speed;
     }
 
     void KnightMovement()
     {
-        /*//Getting the Horizontal and Vertical axis inputs. This is controlled by the unity project settings.
-        float hDirection = Input.GetAxis("Horizontal");
-        float vDirection = Input.GetAxis("Vertical");
-
-        if (hDirection < 0)
-        {
-            playerFrame.velocity = new Vector2(-speed, 0);
-            transform.localScale = new Vector2(-1, 1);
-        }
-
-        else if (hDirection > 0)
-        {
-            playerFrame.velocity = new Vector2(speed, 0);
-            transform.localScale = new Vector2(1, 1);
-        }
-
-        else if (vDirection < 0)
-        {
-            playerFrame.velocity = new Vector2(0,-speed);
-
-        }
-
-        else if (vDirection > 0)
-        {
-            playerFrame.velocity = new Vector2(0, speed);
-        }
-        */
-        float movex = 0f;
-        float movey = 0f;
+   
+        float xMovement = 0f;
+        float yMovement = 0f;
 
         if (Input.GetKey(KeyCode.W))
         {
-            movey = 1f;
+            yMovement = 1f;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            movex = -1f;
-            transform.localScale = new Vector2(-1, 1);
+            xMovement = -1f;
+            transform.localScale = new Vector2(-1, 1);//Change sprite direction.
         }
         if (Input.GetKey(KeyCode.S))
         {
-            movey = -1f;
+            yMovement = -1f;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            movex = 1f;
+            xMovement = 1f;
             transform.localScale = new Vector2(1, 1);
         }
 
-        moveDir = new Vector3(movex, movey).normalized;
+        moveDir = new Vector3(xMovement, yMovement).normalized;
 
     }
     //The VelocityState function is used to determine the state in which the player is in based on its velocity.
@@ -88,7 +62,7 @@ public class SpriteController : MonoBehaviour
     //Calls function whenever object interacts with a trigger.
    
 
-    private void Attack()
+    private void Attack()//In development
     {
 
     }
