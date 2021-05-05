@@ -12,11 +12,9 @@ As per GitHub history.
 
 [Credits, Licences & Attribution]
 
-Legend of Zelda: Oracle of seasons – Box puzzle [image] (n.d) Retrieved from https://strategywiki.org/wiki/The_Legend_of_Zelda:_Oracle_of_Seasons/North_Horon_and_Gnarled_Root_Dungeon 
+Hero Knight – Pixel Art [Unity Package] (Feb, 2021). Thole, S. Retrieved from https://assetstore.unity.com/packages/2d/characters/hero-knight-pixel-art-165188
 
-Hero Knight – Pixel Art [Unity Package] (Feb, 2021). Thole, S. Retrieved from https://assetstore.unity.com/packages/2d/characters/hero-knight-pixel-art-165188 ​
-
-Pixel Art Top Down – Basic [Unity Package] (Mar, 2021). Cainos. Retrieved from https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605 ​
+Pixel Art Top Down – Basic [Unity Package] (Mar, 2021). Cainos. Retrieved from https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605
 
 [Dual Core Studio]. (2017,Mar 20). Unity: Switching Levels/Scenes [video file] Retrieved from https://www.youtube.com/watch?v=26d1uZ7yrfY&list=PL1CgrGp5IduOuM1Ck9fagZTp24X_CPKEH
 
